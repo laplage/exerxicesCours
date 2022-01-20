@@ -129,18 +129,18 @@
 //     alert('Je suis une fonction anonyme');
 // }
 //Appel via une variable
-let anonyme = function () {
-  alert("Je suis une fonction anonyme");
-};
-anonyme();
-// Auto-exécution d'une fonction
-(function () {
-  document.write("Je suis une fonction anonyme invoquée automatiquement");
-})();
+// let anonyme = function () {
+//   alert("Je suis une fonction anonyme");
+// };
+// anonyme();
+// // Auto-exécution d'une fonction
+// (function () {
+//   document.write("Je suis une fonction anonyme invoquée automatiquement");
+// })();
 
-(function bonjour() {
-  document.write("<br> Bonjour à tous !");
-})();
+// (function bonjour() {
+//   document.write("<br> Bonjour à tous !");
+// })();
 
 /*  Les Tableaux à une dimension
   1-  Déclaration
@@ -148,30 +148,30 @@ anonyme();
 
 */
 // Déclaration de tableaux
-let tab1 = [];
-let tab2;
-var tab3 = new Array();
-//  initialisation de tableaux
-let tab4 = ["Lisa", "Bart", "Omer"];
-let tab5 = [1, 2, 3, 4, 6, 8];
-let tab6 = new Array(12, 15, "Francis");
-// Accès a un élement du tableau via son index
-tab5[2]; // valeur = 3
-tab4[1]; // valeur = Bart
-// Modification d'un élément du tableau
-tab4[1] = "Francis";
-//  Parcours d'un tableau avec for
-for (let i = 0; i < tab5.length; i = i + 1) {
-  document.write(tab5[i] + "<br>");
-}
-// Parcours d'un tableau avec for in
-for (let valeur in tab4) {
-  document.write(valeur + "<br>");
-}
-// méthodes de gestion de tableau : push() / pop()
-tab5.push(45);
+// let tab1 = [];
+// let tab2;
+// var tab3 = new Array();
+// //  initialisation de tableaux
+// let tab4 = ["Lisa", "Bart", "Omer"];
+// let tab5 = [1, 2, 3, 4, 6, 8];
+// let tab6 = new Array(12, 15, "Francis");
+// // Accès a un élement du tableau via son index
+// tab5[2]; // valeur = 3
+// tab4[1]; // valeur = Bart
+// // Modification d'un élément du tableau
+// tab4[1] = "Francis";
+// //  Parcours d'un tableau avec for
+// for (let i = 0; i < tab5.length; i = i + 1) {
+//   document.write(tab5[i] + "<br>");
+// }
+// // Parcours d'un tableau avec for in
+// for (let valeur in tab4) {
+//   document.write(valeur + "<br>");
+// }
+// // méthodes de gestion de tableau : push() / pop()
+// tab5.push(45);
 
-tab6.pop();
+// tab6.pop();
 
 /*******************Exemple complet *******************/
 /**
@@ -179,7 +179,7 @@ tab6.pop();
  */
 function initTab(tabEnt) {
   for (let i = 0; i < 10; i = i + 1) {
-    tabEnt.push(i + 1);
+    tabEnt.push(0);
   }
 }
 /**
@@ -217,7 +217,7 @@ function deleleValueByIndex(tabEnt, valSup) {
   }
   return estSuprime;
 }
-/**********Test des fonctions de manulaption du tableau */
+/**********Test des fonctions de manulaption du tableau*************************/
 let tabE = new Array();
 
 // Initialisation du tableau avec 10 nombres
