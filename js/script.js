@@ -321,3 +321,59 @@ initTabDeuxDim(tabE);
 afficherTabDeuxDim(tabE);
 
 document.write("<br> la somme est de : " + sommeTabDeuxDim(tabE));
+
+function NB(tabEnt) {
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+      tabEnt[i][j] = "B";
+    }
+  }
+}
+let tabP = new Array(10);
+for (let i = 0; i < 10; i++) {
+  tabP[i] = new Array(10);
+}
+NB(tabP);
+document.write("<br> ");
+for (let i = 0; i < tabP.length; i++) {
+  for (let j = 0; j < tabP[i].length; j++) {
+    document.write(" " + tabP[i][j] + " ");
+  }
+  document.write("<br>");
+}
+function Noir(tabEnt) {
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+      if ((i = j)) {
+        console.log(i + " - " + j);
+        tabEnt[i][j] = "N";
+      }
+    }
+  }
+}
+Noir(tabP);
+document.write("<br> ");
+for (let i = 0; i < tabP.length; i++) {
+  for (let j = 0; j < tabP[i].length; j++) {
+    document.write(" " + tabP[i][j] + " ");
+  }
+  document.write("<br>");
+}
+
+function moyenne(tabEnt) {
+  let note = 0;
+  let moy = 0;
+  let sup = 0;
+  let total = 0;
+  for (let i = 0; i < tabEnt.length; i++) {
+    for (let j = 0; j < tabEnt[i].length; j++) {
+      note = note + tabEnt[i][j];
+    }
+    moy = note / tabEnt[i].length;
+    if (moy > 10) {
+      sup = sup + 1;
+    }
+    total = (100 * sup) / tabEnt[j].length;
+  }
+  return total + "%";
+}
